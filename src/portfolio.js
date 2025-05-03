@@ -20,8 +20,8 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Mohammad Raza",
-  title: "Hi, it's Mohammad Raza",
+  username: "Shaharyar Ud Din",
+  title: "Hi, It's Shaharyar Ud Din",
   subTitle: emoji(
     "A passionate Mern-Stack Developer with 2+ years of hands-on experience in building and scaling modern web applications from the ground up. I specialize in both frontend and backend development, user-focused solutions that are fast, and scalable.A problem-solver at heart ❤️."
   ),
@@ -33,9 +33,9 @@ const greeting = {
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/mohammadraza123",
-  linkedin: "https://www.linkedin.com/in/mohammad-raza-2210b9243/",
-  gmail: "mohammadrazaarain10@gmail.com",
+  github: "https://github.com/shaharyaruddin",
+  linkedin: "https://www.linkedin.com/in/shaharyaruddin/",
+  gmail: "sheheryark505@gmail.com",
   display: true // Set true to display this section, defaults to false
 };
 
@@ -72,10 +72,7 @@ const skillsSection = {
       skillName: "Nextjs",
       imageSrc: require("./assets/images/next.png"),
     },
-    {
-      skillName: "React Native",
-      imageSrc: require("./assets/images/react.png"),
-    },
+   
     {
       skillName: "Expressjs",
       imageSrc: require("./assets/images/express1.png"),
@@ -89,8 +86,24 @@ const skillsSection = {
       imageSrc: require("./assets/images/mongodb.png"),
     },
     {
+      skillName: "HTML/CSS",
+      imageSrc: require("./assets/images/html-css.jpg"),
+    },
+    {
+      skillName: "Tailwind CSS",
+      imageSrc: require("./assets/images/tailwindcss.png"),
+    },
+    {
+      skillName: "Shadcn",
+      imageSrc: require("./assets/images/shadecn.png"),
+    },
+    {
       skillName: "Firebase",
       imageSrc: require("./assets/images/firebase.png"),
+    },
+    {
+      skillName: "MySQL",
+      imageSrc: require("./assets/images/mysql.png"),
     },
   ],
   
@@ -103,17 +116,28 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Intermediate",
-      logo: require("./assets/images/college.jpg"),
+      schoolName: "BSCS",
+      logo: require("./assets/images/smiu.png"),
       subHeader: "In Computer Science",
-      duration: "2023",
+      duration: "JAN-2022 - DEC-2025",
+      cgpa: "3.0",
+      currentSemester: "8th Semester",
       descBullets: [
         "Gained foundational knowledge in programming, algorithms, and data structures.",
         "Hands-on experience with problem-solving, software development, and computer systems."
       ]
+    },
+    {
+      schoolName: "Intermediate",
+      logo: require("./assets/images/college.png"),
+      subHeader: "In Pre-Engineering",
+      duration: "2019 - 2021",
+      percentage: "83.45%",
+      grade: "A+ Grade"
     }
   ]
 };
+
 
 // Your top 3 proficient stacks/tech experience
 
@@ -128,10 +152,7 @@ const techStack = {
       Stack: "Backend",
       progressPercentage: "70%"
     },
-    {
-      Stack: "Mobile Apps (React Native)",
-      progressPercentage: "76%"
-    }
+    
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -437,8 +458,8 @@ const contactInfo = {
   title: emoji("Contact Me ☎️"),
   subtitle:
     "Reach out me via",
-  number: "+92-3068565775",
-  email_address: "mohammadrazaarain10@gmail.com"
+  number: "+923122370851",
+  email_address: "sheheryark505@gmail.com"
 };
 
 // Twitter Section
