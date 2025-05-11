@@ -1,5 +1,5 @@
 import React, { createRef, useContext } from "react";
-import { Fade, Slide } from "react-reveal";
+import { Fade, Zoom } from "react-reveal";
 import "./EducationCard.scss";
 import StyleContext from "../../contexts/StyleContext";
 
@@ -30,43 +30,32 @@ export default function EducationCard({ school }) {
   }
 
   return (
-    <div>
-      <Fade left duration={1000}>
-        <div className="education-card">
+    <div className="education-card-container">
+      <Fade bottom duration={1200} distance="40px">
+        <div className={`education-card ${isDark ? "dark-mode" : ""}`}>
           {school.logo && (
             <div className="education-card-left">
-              <img
-                crossOrigin="anonymous"
-                ref={imgRef}
-                className="education-roundedimg"
-                src={school.logo}
-                alt={school.schoolName}
-              />
+              <Zoom duration={800}>
+                <img
+                  crossOrigin="anonymous"
+                  ref={imgRef}
+                  className="education-roundedimg"
+                  src={school.logo}
+                  alt={school.schoolName}
+                />
+              </Zoom>
             </div>
           )}
           <div className="education-card-right">
-            <h5 className="education-text-school">{school.schoolName}</h5>
-
-            <div className="education-text-details">
-              <h5
-                className={
-                  isDark
-                    ? "dark-mode education-text-subHeader"
-                    : "education-text-subHeader"
-                }
-              >
-                {school.subHeader}
-              </h5>
-              <p
-                className={`${
-                  isDark ? "dark-mode" : ""
-                } education-text-duration`}
-              >
-                {school.duration}
+            <h4 className="education-text-school">{school.schoolName}</h4>
+            {school.place && (
+              <p className="education-text-place">
+                <i className="fas fa-map-marker-alt"></i> {school.place}
               </p>
-              {school.location && (
-                <p className="education-text-location">{school.location}</p>
-              )}
+            )}
+            <div className="education-text-details">
+              <h5 className="education-text-subHeader">{school.subHeader}</h5>
+              <p className="education-text-duration">{school.duration}</p>
               {school.website && (
                 <p className="education-text-website">
                   <a
@@ -74,7 +63,7 @@ export default function EducationCard({ school }) {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    {school.website}
+                    Visit Website
                   </a>
                 </p>
               )}
@@ -106,9 +95,6 @@ export default function EducationCard({ school }) {
           </div>
         </div>
       </Fade>
-      <Slide left duration={2000}>
-        <div className="education-card-border"></div>
-      </Slide>
     </div>
   );
 }

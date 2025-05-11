@@ -105,6 +105,10 @@ const skillsSection = {
       skillName: "MySQL",
       imageSrc: require("./assets/images/mysql.png"),
     },
+    {
+      skillName: "Framer Motion",
+      imageSrc: require("./assets/images/framer.webp"),
+    },
   ],
   
   display: true // Set false to hide this section, defaults to true
@@ -117,6 +121,7 @@ const educationInfo = {
   schools: [
     {
       schoolName: "BSCS",
+      place: "Sindh Madressatul Islam University",
       logo: require("./assets/images/smiu.png"),
       subHeader: "In Computer Science",
       duration: "JAN-2022 - DEC-2025",
@@ -129,6 +134,7 @@ const educationInfo = {
     },
     {
       schoolName: "Intermediate",
+      place: "Islamia Science College",
       logo: require("./assets/images/college.png"),
       subHeader: "In Pre-Engineering",
       duration: "2019 - 2021",
@@ -163,10 +169,10 @@ const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
     {
-      role: "JavaScript Developer",
-      company: "IT Panda",
-      companylogo: require("./assets/images/itpanda.jpg"),
-      date: "May 2023 – January 2024",
+      role: "MERN Stack Developer ",
+      company: "Systematic Hub",
+      companylogo: require("./assets/images/systematichub.jpg"),
+      date: "March 2025 – Present",
       descBullets: [
         "Built interactive web applications using React.js and modern JavaScript frameworks, focusing on performance and scalability.",
         "Wrote clean, efficient, and ES6+ standard code to develop fast and responsive websites.",
@@ -187,9 +193,9 @@ const workExperiences = {
       ]
     },
     {
-      role: "Mern Stack Developer",
-      company: "Digital Bee Studio",
-      companylogo: require("./assets/images/digital_bee_studio_logo.jpg"),
+      role: "Internee",
+      company: "AboutXtreme",
+      companylogo: require("./assets/images/aboutxtreme.jpg"),
       date: "January 2025 – Present",
       descBullets: [
         "Developed responsive and dynamic frontend applications using React.js, focusing on reusable components and optimized performance.",
