@@ -48,69 +48,76 @@ const skillsSection = {
     emoji(
       "⚡ Develop highly interactive Frontend / User Interfaces for web and mobile applications."
     ),
-    emoji("⚡ Build powerful, scalable Backend APIs and server-side logic using modern technologies."),
-    emoji("⚡ Create Progressive Web Applications (PWA) with Single Page Application (SPA) architecture."),
-    emoji("⚡  Seamless integration of third-party services like Firebase, Stripe, Cloudinary, and more."),
-    emoji("⚡ Passionate about delivering high-quality, performance-optimized full stack solutions."),
-
+    emoji(
+      "⚡ Build powerful, scalable Backend APIs and server-side logic using modern technologies."
+    ),
+    emoji(
+      "⚡ Create Progressive Web Applications (PWA) with Single Page Application (SPA) architecture."
+    ),
+    emoji(
+      "⚡  Seamless integration of third-party services like Firebase, Stripe, Cloudinary, and more."
+    ),
+    emoji(
+      "⚡ Passionate about delivering high-quality, performance-optimized full stack solutions."
+    )
   ],
 
   softwareSkills: [
     {
       skillName: "JavaScript",
-      imageSrc: require("./assets/images/js.png"), // or use a URL
+      imageSrc: require("./assets/images/js.png") // or use a URL
     },
     {
       skillName: "TypeScript",
-      imageSrc: require("./assets/images/ts.png"),
+      imageSrc: require("./assets/images/ts.png")
     },
     {
       skillName: "Reactjs",
-      imageSrc: require("./assets/images/react.png"),
+      imageSrc: require("./assets/images/react.png")
     },
     {
       skillName: "Nextjs",
-      imageSrc: require("./assets/images/next.png"),
+      imageSrc: require("./assets/images/next.png")
     },
-   
+
     {
       skillName: "Expressjs",
-      imageSrc: require("./assets/images/express1.png"),
+      imageSrc: require("./assets/images/express1.png")
     },
     {
       skillName: "Nodejs",
-      imageSrc: require("./assets/images/node.png"),
+      imageSrc: require("./assets/images/node.png")
     },
     {
       skillName: "MongoDB",
-      imageSrc: require("./assets/images/mongodb.png"),
+      imageSrc: require("./assets/images/mongodb.png")
     },
     {
       skillName: "HTML/CSS",
-      imageSrc: require("./assets/images/html-css.jpg"),
+      imageSrc: require("./assets/images/html-css.jpg")
     },
     {
       skillName: "Tailwind CSS",
-      imageSrc: require("./assets/images/tailwindcss.png"),
+      imageSrc: require("./assets/images/tailwindcss.png")
     },
     {
       skillName: "Shadcn",
-      imageSrc: require("./assets/images/shadecn.png"),
+      imageSrc: require("./assets/images/shadecn.png")
     },
     {
       skillName: "Firebase",
-      imageSrc: require("./assets/images/firebase.png"),
+      imageSrc: require("./assets/images/firebase.png")
     },
     {
       skillName: "MySQL",
-      imageSrc: require("./assets/images/mysql.png"),
+      imageSrc: require("./assets/images/mysql.png")
     },
     {
       skillName: "Framer Motion",
-      imageSrc: require("./assets/images/framer.webp"),
-    },
+      imageSrc: require("./assets/images/framer.webp")
+    }
   ],
-  
+
   display: true // Set false to hide this section, defaults to true
 };
 
@@ -144,7 +151,6 @@ const educationInfo = {
   ]
 };
 
-
 // Your top 3 proficient stacks/tech experience
 
 const techStack = {
@@ -157,8 +163,7 @@ const techStack = {
     {
       Stack: "Backend",
       progressPercentage: "70%"
-    },
-    
+    }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
 };
@@ -174,14 +179,13 @@ const workExperiences = {
       companylogo: require("./assets/images/systematichub.jpg"),
       date: "March 2025 – Present",
       descBullets: [
-        "Built interactive web applications using React.js and modern JavaScript frameworks, focusing on performance and scalability.",
-        "Wrote clean, efficient, and ES6+ standard code to develop fast and responsive websites.",
-        "Enhanced UI interactivity, functionality, and user experience by leveraging core JavaScript skills and best practices.",
-        "Collaborated in agile development teams, delivering real-world web solutions aligned with project requirements."
+        "Developed and maintained an ERP system using the MERN stack integrated with Socket.IO for real-time communication and data synchronization.",
+        "Designed and built a visually engaging, animated website for an individual brand using modern frontend technologies to enhance the company portfolio.",
+        "Collaborated with the backend team for API integration, debugging, and feature implementation, ensuring smooth end-to-end development and seamless user experience."
       ]
     },
     {
-      role: "Reactjs Developer",
+      role: "Frontend Developer",
       company: "Rayon Studios",
       companylogo: require("./assets/images/rayon.png"),
       date: "March 2024 – December 2025",
@@ -198,10 +202,10 @@ const workExperiences = {
       companylogo: require("./assets/images/aboutxtreme.jpg"),
       date: "January 2025 – Present",
       descBullets: [
-        "Developed responsive and dynamic frontend applications using React.js, focusing on reusable components and optimized performance.",
-        "Built and maintained backend services with Node.js, Express.js, and MongoDB, creating secure and scalable RESTful APIs.",
-        "Integrated frontend and backend systems to deliver complete, high-performance full-stack web applications.",
-        "Optimized application performance and improved scalability through best practices in full stack development."
+        "Leveraged PowerApps and ReactJS to enhance existing applications with new features while utilizing Azure Services.",
+
+        "Utilized Microsoft Azure Cognitive Services for AI integration.",
+        "Worked on implementing and maintaining CI/CD pipelines to streamline deployment and improve development workflow."
       ]
     }
   ]
@@ -227,7 +231,7 @@ const bigProjects = {
       images: [
         require("./assets/images/borrowbe-1.png"),
         require("./assets/images/borrowbe-2.png"),
-        require("./assets/images/borrowbe-3.png"),
+        require("./assets/images/borrowbe-3.png")
       ], // Add multiple images here
       projectDesc: [
         {
@@ -235,23 +239,28 @@ const bigProjects = {
             "BorrowBe is an online marketplace that enables users to rent out or lease products, services, and spaces..."
         },
         {
-          description:
-          <>
-          <strong>Tech Stack:</strong> NextJS, Redux, Firebase, Node.js, Express.js, MongoDB, Tailwind CSS
-        </>
+          description: (
+            <>
+              <strong>Tech Stack:</strong> NextJS, Redux, Firebase, Node.js,
+              Express.js, MongoDB, Tailwind CSS
+            </>
+          )
         },
         {
           description: "Free ad posting for rental listings"
         },
         {
-          description: "Category-wise browsing (real estate, vehicles, services, etc.)"
+          description:
+            "Category-wise browsing (real estate, vehicles, services, etc.)"
         },
         {
-          description: "Real-time chat functionality between renters and providers"
+          description:
+            "Real-time chat functionality between renters and providers"
         },
         {
-          description: "Secure backend with Express.js and MongoDB for listing and transaction management"
-        },
+          description:
+            "Secure backend with Express.js and MongoDB for listing and transaction management"
+        }
       ],
       footerLink: [
         {
@@ -266,7 +275,7 @@ const bigProjects = {
       images: [
         require("./assets/images/emporia-1.png"),
         require("./assets/images/emporia-2.png"),
-        require("./assets/images/emporia-3.png"),
+        require("./assets/images/emporia-3.png")
       ], // Add multiple images here
       projectDesc: [
         {
@@ -274,10 +283,12 @@ const bigProjects = {
             "Crystal Emporia is a fully functional e-commerce platform. It provides a seamless shopping experience..."
         },
         {
-          description:
-          <>
-          <strong>Tech Stack:</strong> ReactJS, Redux, Node.js, Express.js, MongoDB, Firebase, Tailwind CSS
-        </>
+          description: (
+            <>
+              <strong>Tech Stack:</strong> ReactJS, Redux, Node.js, Express.js,
+              MongoDB, Firebase, Tailwind CSS
+            </>
+          )
         },
         {
           description:
@@ -286,7 +297,7 @@ const bigProjects = {
         {
           description:
             "Implemented advanced features including product search, category filtering, cart and wishlist management..."
-        },
+        }
       ],
       footerLink: [
         {
@@ -301,7 +312,7 @@ const bigProjects = {
       images: [
         require("./assets/images/olx-1.png"),
         require("./assets/images/olx-2.png"),
-        require("./assets/images/olx-3.png"),
+        require("./assets/images/olx-3.png")
       ], // Add multiple images here
       projectDesc: [
         {
@@ -309,18 +320,21 @@ const bigProjects = {
             "I created an OLX Clone project using React, Firebase, Redux, and React Router. This project involved..."
         },
         {
-          description:
-          <>
-            <strong>Tech Stack:</strong> ReactJS, Redux, Firebase, React Router, Tailwind CSS
-          </>
+          description: (
+            <>
+              <strong>Tech Stack:</strong> ReactJS, Redux, Firebase, React
+              Router, Tailwind CSS
+            </>
+          )
         },
         {
-          description: "Managed global state with Redux and implemented dynamic routing for smooth navigation..."
+          description:
+            "Managed global state with Redux and implemented dynamic routing for smooth navigation..."
         },
         {
           description:
             "The project demonstrates building a full-stack responsive marketplace application..."
-        },
+        }
       ],
       footerLink: [
         {
@@ -332,7 +346,6 @@ const bigProjects = {
   ],
   display: true
 };
-
 
 // Achievement Section
 // Include certificates, talks etc
@@ -401,7 +414,7 @@ const blogSection = {
   title: "Blogs",
   subtitle:
     "With Love for Developing cool stuff, I love to write and teach others what I have learnt.",
-  displayMediumBlogs: "true", // Set true to display fetched medium blogs instead of hardcoded ones
+  displayMediumBlogs: "true" // Set true to display fetched medium blogs instead of hardcoded ones
   // blogs: [
   //   {
   //     url: "https://blog.usejournal.com/create-a-google-assistant-action-and-win-a-google-t-shirt-and-cloud-credits-4a8d86d76eae",
@@ -425,7 +438,7 @@ const talkSection = {
   title: "TALKS",
   subtitle: emoji(
     "I LOVE TO SHARE MY LIMITED KNOWLEDGE AND GET A SPEAKER BADGE 😅"
-  ),
+  )
 
   // talks: [
   //   {
@@ -462,8 +475,7 @@ const resumeSection = {
 
 const contactInfo = {
   title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Reach out me via",
+  subtitle: "Reach out me via",
   number: "+923122370851",
   email_address: "sheheryark505@gmail.com"
 };
