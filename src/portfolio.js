@@ -269,6 +269,131 @@ const bigProjects = {
         }
       ]
     },
+
+{
+  // image: require("./assets/images/frissko.png"),
+  projectName: "Frissko",
+  images: [
+    require("./assets/images/frissko-1.jpg"),
+    require("./assets/images/frissko-2.jpg"),
+    require("./assets/images/frissko-3.jpg")
+  ], // Add multiple images here
+  projectDesc: [
+    {
+      description:
+        "Frissko is a modern soft drink brand website designed to promote refreshing beverages with an immersive and animated digital experience."
+    },
+    {
+      description: (
+        <>
+          <strong>Tech Stack:</strong> ReactJS, Tailwind CSS, GSAP, Redux Toolkit, Three.js
+        </>
+      )
+    },
+    {
+      description: "3D soft drink can model integrated using Three.js for a visually rich experience"
+    },
+    {
+      description: "Smooth animations powered by GSAP for engaging transitions"
+    },
+    {
+      description: "Showcases multiple drink flavors with bold and colorful visuals"
+    },
+    {
+      description: "Fully responsive layout for optimal performance across devices"
+    }
+  ],
+  footerLink: [
+    {
+      name: "Visit Website",
+      url: "https://frissko.webb-app.com/"
+    }
+  ]
+},
+{
+  // image: require("./assets/images/brightmindly.png"),
+  projectName: "BrightMindly",
+  images: [
+    require("./assets/images/brightmindly-1.jpg"),
+    require("./assets/images/brightmindly-2.jpg"),
+    require("./assets/images/brightmindly-3.jpg")
+  ], // Add multiple images here
+  projectDesc: [
+    {
+      description:
+        "BrightMindly is a modern education platform designed to inspire and guide learners through a visually engaging and user-friendly interface."
+    },
+    {
+      description: (
+        <>
+          <strong>Tech Stack:</strong> ReactJS, Next.js, Tailwind CSS, Framer Motion
+        </>
+      )
+    },
+    {
+      description: "Smooth and professional animations using Framer Motion for an interactive user journey"
+    },
+    {
+      description: "Showcases educational programs, learning goals, and subject areas clearly and concisely"
+    },
+    {
+      description: "Clean and minimal design focused on readability and accessibility"
+    },
+    {
+      description: "Fully responsive layout that adapts seamlessly to all devices"
+    }
+  ],
+  footerLink: [
+    {
+      name: "Visit Website",
+      url: "https://brightmindly.simplifiedsite.com/"
+    }
+  ]
+},
+
+
+{
+  // image: require("./assets/images/beastzone.png"),
+  projectName: "Beast Zone",
+  images: [
+    require("./assets/images/beastzone-1.jpg"),
+    require("./assets/images/beastzone-2.jpg"),
+  ], // Add multiple images here
+  projectDesc: [
+    {
+      description:
+        "Beast Zone is a high-impact gym and fitness website designed to attract fitness enthusiasts with a bold, energetic, and modern design."
+    },
+    {
+      description: (
+        <>
+          <strong>Tech Stack:</strong> Next.js, ReactJS, Tailwind CSS, GSAP
+        </>
+      )
+    },
+    {
+      description: "Eye-catching animations and scroll effects using GSAP for a powerful user experience"
+    },
+    {
+      description: "Dark-themed aesthetic matching the aggressive and intense gym branding"
+    },
+    {
+      description: "Responsive design to ensure smooth usability on all screen sizes"
+    },
+    {
+      description: "Feature-rich layout showcasing gym benefits, training programs, and transformation results"
+    }
+  ],
+  footerLink: [
+    {
+      name: "Visit Website",
+      url: "https://beast-zone.simplifiedsite.com/"
+    }
+  ]
+}
+,
+
+
     {
       image: require("./assets/images/emporia.png"),
       projectName: "Crystal Emporia (E-commerce)",
