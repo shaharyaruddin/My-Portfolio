@@ -1,16 +1,10 @@
 @import "../../_globalColor";
 
-/* Ensure box-sizing is consistent */
 * {
   box-sizing: border-box;
 }
 
-.card-image {
-  max-width: 100%;
-  height: auto;
-  width: 250px;
-}
-
+/* Card Title */
 .card-title {
   color: $titleColor;
   font-size: 22px;
@@ -19,62 +13,63 @@
   margin: 15px 0 0 0;
 }
 
+/* Card Subtitle */
 .card-subtitle {
   color: $cardSubtitle;
   font-size: 17px;
   line-height: 1.5rem;
 }
 
+/* Project Card */
 .project-card {
   display: flex;
   flex-direction: column;
   background-color: $lightBackground2;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 10px;
   border: 1px solid $lightBorder1;
+  transition: all 0.3s ease;
+  width: 100%; /* Ensure cards take full width of their slide */
+  max-width: 360px; /* Consistent max width for cards */
+  margin: 0 auto; /* Center cards in their slide */
 }
 
 .project-card-light {
   box-shadow: $lightBoxShadowDark 0px 10px 30px -15px;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.project-card-dark {
-  box-shadow: 0px 10px 30px -15px $darkBoxShadow;
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.25s ease;
-}
-
-.project-detail {
-  text-align: center;
 }
 
 .project-card-light:hover {
   box-shadow: $lightBoxShadowDark 0px 20px 30px -10px;
+  transform: translateY(-5px);
 }
 
-.project-card-dark:hover {
-  box-shadow: 0px 20px 30px -10px $darkBoxShadow;
-}
-
-.project-image {
-  position: relative;
-  height: 250px;
-  // overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* Project Detail */
+.project-detail {
+  text-align: center;
 }
 
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 1rem 1rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Adjusted padding for consistency */
 }
 
+/* Swiper for Projects (Main Slider showing 3 projects) */
+.projects-swiper {
+  width: 100%;
+  padding-bottom: 50px; /* Increased space for pagination */
+}
+
+.projects-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 360px; /* Fixed width to ensure 3 cards fit */
+  height: auto; /* Allow height to adjust based on content */
+}
+
+/* Project Card Footer */
 .project-card-footer span.project-tag {
   background: $buttonColor;
   color: $lightBackground3;
@@ -90,24 +85,27 @@
   margin: 0 0.5rem 0.5rem 0;
   padding: 0 0.75em;
   cursor: pointer;
-  transition: 0.2s ease-in;
+  transition: background 0.2s ease-in;
+  &:hover {
+    background: darken($buttonColor, 10%);
+  }
 }
 
-/* Project Slider */
+/* Project Slider (Individual Project Images) */
 .project-slider {
   position: relative;
   width: 100%;
-  // overflow: hidden;
+  height: 250px; /* Fixed height for consistency */
 }
 
-/* Swiper Container */
+/* Swiper Container (Individual Project Images) */
 .swiper-container {
   width: 100%;
   height: 100%;
 }
 
-/* Swiper Slide */
-.swiper-slide {
+/* Swiper Slide (Individual Project Images) */
+.swiper-container .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,18 +121,58 @@
   border-radius: 8px;
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.project-image:hover {
-  transform: scale(1.05);
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: $lightBackground3;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  z-index: 1001;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  &::after {
+    font-size: 20px;
+    font-weight: bold;
+  }
 }
 
-/* Simplified Image Preview Modal */
+/* Swiper Pagination */
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  z-index: 1001;
+}
+
+.swiper-pagination-bullet {
+  background: $lightBackground3;
+  opacity: 0.5;
+  width: 10px;
+  height: 10px;
+  &.swiper-pagination-bullet-active {
+    background: $buttonColor;
+    opacity: 1;
+  }
+}
+
+/* Image Preview Modal */
 .image-preview-modal {
   position: fixed;
-  top: 0px;
-  bottom: 0;
-  left:   0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.9);
@@ -142,29 +180,31 @@
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  // overflow: hidden;
+  animation: fadeIn 0.3s ease;
 }
 
 /* Preview Content */
 .image-preview-content {
   position: relative;
-  width: 90%;
-  height: 90%;
+  width: 100%;
   max-width: 800px;
-  max-height: 600px;
+  height: auto;
+  max-height: 90vh;
+  padding: 1rem;
+  padding-top: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 /* Preview Slider */
-.image-preview-content .swiper-container {
+.swiper-preview {
   width: 100%;
   height: 100%;
 }
 
 /* Preview Slide */
-.image-preview-content .swiper-slide {
+.swiper-preview .swiper-slide {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -174,346 +214,143 @@
 
 /* Preview Image */
 .preview-image {
-  max-width: 100%;
-  // max-height: 100%;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 64px);
   object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
 }
 
 /* Close Button */
 .close-preview {
   position: absolute;
-  top: 130px;
-  right: 20px;
-  font-size: 2rem;
-  color: white;
+  top: 16px;
+  right: 16px;
+  font-size: 24px;
+  color: $lightBackground3;
   cursor: pointer;
   z-index: 1001;
+  transition: color 0.3s ease;
+  &:hover {
+    color: lighten($buttonColor, 20%);
+  }
 }
 
-/* Navigation Arrows */
-.swiper-button-next,
-.swiper-button-prev {
-  color: white;
-  z-index: 1001;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-}
-
-/* Pagination Dots */
-.swiper-pagination {
-  position: absolute;
-  bottom: 10px;
-  z-index: 1001;
-}
-
-.swiper-pagination-bullet {
-  background: white;
-  opacity: 0.5;
-  width: 10px;
-  height: 10px;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
+/* Animation for Modal */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Media Queries for Mobile Responsiveness */
+@media (max-width: 1024px) {
+  .projects-swiper {
+    padding-bottom: 40px;
+  }
+
+  .projects-swiper .swiper-slide {
+    width: 300px; /* Adjusted for 2 cards on medium screens */
+  }
+
+  .project-card {
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .project-subtitle {
     font-size: 16px;
     text-align: center;
   }
 
-  .projects-container {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Reduce min-width for smaller screens */
-    gap: 0.5rem;
-  }
-
   .project-card {
     padding: 1rem;
+    max-width: 100%; /* Full width for single card on small screens */
   }
 
   .project-slider {
-    height: 250px; /* Reduce height for mobile */
+    height: 200px; /* Slightly smaller for mobile */
   }
 
-  .swiper-slide {
-    height: 100%;
-  }
-
-  .project-image {
-    object-fit: cover;
+  .projects-swiper .swiper-slide {
+    width: 100%; /* Full width for single card */
   }
 
   .image-preview-modal {
-    padding: 10px; /* Add some padding to ensure content isn't too close to edges */
+    padding: 10px;
   }
 
   .image-preview-content {
-    width: 100%; /* Use full width on mobile */
-    height: 80%; /* Reduce height to fit mobile screens */
-    max-width: 100%; /* Remove max-width constraint */
-    max-height: 80vh; /* Use viewport height to prevent overflow */
-  }
-
-  .preview-image {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  .close-preview {
-    top: 10px;
-    right: 10px;
-    font-size: 1.5rem; /* Smaller close button for mobile */
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 30px; /* Smaller arrows for mobile */
-    height: 30px;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 1rem; /* Smaller arrow icons */
-  }
-
-  .swiper-pagination {
-    bottom: 5px;
-  }
-
-  .swiper-pagination-bullet {
-    width: 8px; /* Smaller dots for mobile */
-    height: 8px;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-slider {
-    height: 200px; /* Further reduce height for very small screens */
-  }
-
-  .image-preview-content {
-    height: 70%; /* Further reduce height for very small screens */
-    max-height: 70vh;
-  }
-
-  .close-preview {
-    font-size: 1.2rem; /* Even smaller close button */
-  }
-
-  .swiper-button-next,
-  .swiper-button-prev {
-    width: 25px;
-    height: 25px;
-  }
-
-  .swiper-button-next::after,
-  .swiper-button-prev::after {
-    font-size: 0.8rem;
-  }
-
-  .swiper-pagination-bullet {
-    width: 6px;
-    height: 6px;
-  }
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  width: 30px;
-  height: 30px;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 50%;
-  color: #fff;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s ease;
-  cursor: pointer !important;
-}
-
-.swiper-button-prev:hover,
-.swiper-button-next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-size: 16px;
-  font-weight: bold;
-}
-
-
-
-.image-preview-content {
-  position: relative;
-  width: 90%;
-  height: auto;
-  max-width: 800px;
-  max-height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.preview-image {
-  max-width: 100%;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain;
-  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-}
-@media only screen and (max-width: 500px) {
-  .image-preview-modal {
-    justify-content: flex-start; /* So image is not vertically centered off-screen */
-    // align-items: center;
-    padding: 1rem;
-  }
-
-  .image-preview-content {
-    flex-direction: column;
     width: 95%;
-    height: auto;
-    max-height: 90vh;
+    max-height: 80vh;
     padding: 1rem;
+    padding-top: 3rem;
   }
 
   .preview-image {
-    width: 100%;
-    height: auto;
-    max-height: 70vh;
-    object-fit: contain;
+    max-height: 80vh;
+  }
+
+  .close-preview {
+    top: 12px;
+    right: 12px;
+    font-size: 20px;
   }
 
   .swiper-button-next,
   .swiper-button-prev {
     width: 30px;
     height: 30px;
+    &::after {
+      font-size: 14px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 500px) {
+  .image-preview-modal {
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .image-preview-content {
+    width: 100%;
+    max-height: 90vh;
+    padding: 10px;
+    padding-top: 3rem;
+  }
+
+  .preview-image {
+    max-height: 80vh;
   }
 
   .close-preview {
-    font-size: 1.5rem;
     top: 10px;
     right: 10px;
-  }
-}
-@media only screen and (max-width: 500px) {
-  .image-preview-modal {
-    justify-content: unset;
-    align-items: unset;
+    font-size: 18px;
   }
 
-  .image-preview-content {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px;
+    height: 25px;
+    &::after {
+      font-size: 12px;
+    }
   }
 
-  .preview-image {
-    width: 100%;
-    height: auto;
-    max-height: 80vh;
-    object-fit: contain;
-  }
-}
-
-
-.image-preview-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: none; // Remove restriction
-  max-height: none;
-}
-
-.preview-image {
-  width: 100%;
-  height: auto;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-@media (max-width: 768px) {
-  .preview-image {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-  }
-}
-.image-preview-content .swiper {
-  width: 100%;
-  height: 100%;
-}
-.close-icon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 10;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-.image-preview-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: none;
-  max-height: none;
-  padding-top: 3rem; /* space for close icon */
-}
-
-.preview-image {
-  width: 100%;
-  height: auto;
-  max-height: calc(100vh - 64px); /* prevent image cutoff */
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-.image-preview-content .swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.close-icon {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 10;
-  font-size: 24px;
-  color: white;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .image-preview-content {
-    padding: 1rem;
-    padding-top: 3rem; /* maintain spacing for close icon */
-  }
-
-  .preview-image {
-    max-height: 80vh; /* safer for mobile viewports */
-  }
-
-  .close-icon {
-    top: 12px;
-    right: 12px;
-    font-size: 28px;
+  .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
   }
 }
