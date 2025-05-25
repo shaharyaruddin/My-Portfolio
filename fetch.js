@@ -10,7 +10,7 @@ const MEDIUM_USERNAME = process.env.MEDIUM_USERNAME;
 
 const ERR = {
   noUserName:
-    "Github Username was found to be undefined. Please set all relevant environment variables.",
+    "Github Username was found to  be undefined. Please set all relevant environment variables.",
   requestFailed:
     "The request to GitHub didn't succeed. Check if GitHub token in your .env file is correct.",
   requestFailedMedium:
