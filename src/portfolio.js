@@ -462,7 +462,80 @@ const bigProjects = {
           url: "https://olx-ecommerce.vercel.app/"
         }
       ]
+    },
+   {
+  // image: require("./assets/images/blockchain.png"), // Replace with your actual main image
+  projectName: "Blockchain Brand Website",
+  images: [
+    require("./assets/images/blockchain-1.jpg"),
+    require("./assets/images/blockchain-2.jpg"),
+    require("./assets/images/blockchain-3.jpg")
+  ],
+  projectDesc: [
+    {
+      description:
+        "I developed a modern and responsive Blockchain brand website using React, Next.js, and GSAP. The site introduces blockchain technology in a simplified and engaging manner."
+    },
+    {
+      description: (
+        <>
+          <strong>Tech Stack:</strong> ReactJS, Next.js, GSAP, Tailwind CSS
+        </>
+      )
+    },
+    {
+      description:
+        "Implemented smooth and visually appealing animations using GSAP to enhance user engagement and create a premium feel."
+    },
+    {
+      description:
+        "Optimized for performance and SEO using Next.js features like server-side rendering and dynamic routing."
     }
+  ],
+  footerLink: [
+    {
+      name: "Visit Website",
+      url: "https://blockchain.simplifiedsite.com/"
+    }
+  ]
+},
+{
+  image: require("./assets/images/fintech-1.jpg"), // Replace with your actual main image
+  projectName: "Fintech Brand Website",
+  images: [
+    require("./assets/images/fintech-1.jpg"),
+    require("./assets/images/fintech-2.jpg"),
+  ],
+  projectDesc: [
+    {
+      description:
+        "I built a sleek and professional Fintech brand website using React, Next.js, and GSAP. The site highlights financial solutions and services with a modern UI."
+    },
+    {
+      description: (
+        <>
+          <strong>Tech Stack:</strong> ReactJS, Next.js, GSAP, Tailwind CSS
+        </>
+      )
+    },
+    {
+      description:
+        "Used GSAP animations to create smooth transitions, scroll effects, and interactive UI elements that enhance user engagement."
+    },
+    {
+      description:
+        "Optimized with Next.js for fast loading, SEO, and scalability to support business growth and marketing outreach."
+    }
+  ],
+  footerLink: [
+    {
+      name: "Visit Website",
+      url: "http://fintech.simplifiedsite.com/"
+    }
+  ]
+}
+
+
   ],
   display: true
 };
